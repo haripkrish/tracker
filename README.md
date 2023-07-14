@@ -43,7 +43,7 @@ Distributed caching is choosen instead of local cache so that in a mulitple work
 
 3. Run the docker compose up to bring up all the components
 
-```docker-compose up -d```
+```docker-compose up -d --build --force-recreate --renew-anon-volumes```
 
 -  There are four services as part of the Docker Compose configuration for the "Tracker" application:
     -  tracker-app -> Webserver FastAPI
@@ -53,6 +53,10 @@ Distributed caching is choosen instead of local cache so that in a mulitple work
 -  **Please note: There is a 10 seconds delay for the application to start for loading all the dependencies** 
 4. The HTTP API will be accessible using the port 8000 and the docs will be available at 
 ```http://localhost:8000/docs```
+
+5. Run the docker compose down to bring down all the components 
+
+```docker-compose down -v```
 
 ## Testing the app
 
